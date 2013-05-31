@@ -62,6 +62,7 @@ public class Client implements Peer, Serializable {
 	}
 
 	public void giocata(int value) {
+		//hvkjsvdljasvdsaljvsdfhvba
 		
 		// Wait for a while..
 		for(int i = 0; i < 3; i ++) {
