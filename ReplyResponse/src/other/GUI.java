@@ -1,4 +1,4 @@
-package peer;
+package other;
 
 import java.awt.Container;
 import java.awt.event.MouseEvent;
@@ -8,13 +8,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import remoteClient.Client;
+
+
 public class GUI extends JFrame implements MouseListener {
 	
 	private JPanel panel;
 	private Client client;
 	
-	public GUI(String name, Client client) {
-		super(name);
+	public GUI(Client client) {
+		super(client.getName());
 		super.setBounds(100, 100, 300, 100);
 		
 		panel = new JPanel();
@@ -27,14 +30,13 @@ public class GUI extends JFrame implements MouseListener {
 	    // pane.add(someWidget);
 	    setVisible(true); // display this frame
 	    
-	    JButton b = new JButton("click");
+	    JButton b = new JButton("saluta");
 	    b.addMouseListener(this);
 	    panel.add(b);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		client.giocata(7698);
 	}
 
 	@Override

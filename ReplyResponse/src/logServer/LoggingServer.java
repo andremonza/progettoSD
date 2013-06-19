@@ -1,7 +1,10 @@
-package peer;
+package logServer;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+
+import remoteClient.Peer;
+
 
 public interface LoggingServer extends Remote {
 	
